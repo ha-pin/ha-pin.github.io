@@ -15,3 +15,4 @@ nav:
 ### 快速查阅
 
 - [哈拼标准化](/zh-CN/standardize)
+- [输入法支持](/zh-CN/ime)
