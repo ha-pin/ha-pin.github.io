@@ -5,6 +5,11 @@ export default defineConfig({
   esbuild: {},
   mfsu: {},
   mode: 'site',
+  locales: [
+    ['en-US', 'English'],
+    ['zh-CN', '中文'],
+    ['kz', 'قازاقشا'],
+  ],
   navs: {
     'en-US': [
       null,
