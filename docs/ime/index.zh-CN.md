@@ -16,9 +16,9 @@ nav:
 
 > 兼容 `哈拼正式版方案v1.x`
 
-| 方案名称                           | 项目地址                                               | 说明                         | 开源协议  |
-| ---------------------------------- | ------------------------------------------------------ | ---------------------------- | --------- |
-| [Hapin Arabic](./ime/hapin-arabic) | [hapin-arabic](https://github.com/ha-pin/hapin-arabic) | **波斯-阿拉伯字母** 键入支持 | `GPL-3.0` |
-| Hapin Cyrillic                     | _开发中_                                               | **西里尔字母** 键入支持      | `GPL-3.0` |
+| 方案名称                               | 项目地址                                                   | 说明                         | 开源协议  |
+| -------------------------------------- | ---------------------------------------------------------- | ---------------------------- | --------- |
+| [Hapin Arabic](./ime/hapin-arabic)     | [hapin-arabic](https://github.com/ha-pin/hapin-arabic)     | **波斯-阿拉伯字母** 键入支持 | `GPL-3.0` |
+| [Hapin Cyrillic](./ime/hapin-cyrillic) | [hapin-cyrillic](https://github.com/ha-pin/hapin-cyrillic) | **西里尔字母** 键入支持      | `GPL-3.0` |
 
 > **TODO** 随着哈萨克斯坦拉丁化改革，哈拼有计划对此进行支持，但目前尚未稳定。
