@@ -8,7 +8,7 @@ export default defineConfig({
   locales: [
     ['en-US', 'English'],
     ['zh-CN', '中文'],
-    ['kz', 'قازاقشا'],
+    // ['kz', 'قازاقشا'],
   ],
   navs: {
     'en-US': [
@@ -39,6 +39,12 @@ export default defineConfig({
       },
     ],
 
+    '/projects/': [
+      {
+        title: 'Projects',
+      },
+    ],
+
     '/zh-CN/getting-started/': [
       {
         title: '快速上手',
@@ -48,6 +54,12 @@ export default defineConfig({
     '/zh-CN/standardarize/': [
       {
         title: '哈拼标准化',
+      },
+    ],
+
+    '/zh-CN/projects/': [
+      {
+        title: '衍生项目',
       },
     ],
   },
