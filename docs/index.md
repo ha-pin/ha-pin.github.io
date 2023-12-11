@@ -5,7 +5,9 @@ hero:
   actions:
     - text: Getting Started
       link: /getting-started
-footer: Copyright &copy; 2022 [Hapin](https://github.com/ha-pin) All Rights Reserved <br />Powered by [dumi](https://d.umijs.org)
+    - text: Join Discord
+      link: https://discord.gg/aU2BsjSqhq
+footer: Copyright &copy; 2023 [Hapin](https://github.com/ha-pin) All Rights Reserved <br />Powered by [dumi](https://d.umijs.org)
 ---
 
 ## Hello Hapin
