@@ -5,10 +5,12 @@ hero:
   actions:
     - text: 快速上手
       link: /getting-started
+    - text: 加入 Discord
+      link: https://discord.gg/aU2BsjSqhq
   footer: Copyright &copy; 2022 [Hapin](https://github.com/ha-pin) All Rights Reserved <br />Powered by [dumi](https://d.umijs.org)
 ---
 
-## Hello Hapin
+## 你好，哈拼
 
 哈拼，即哈萨克语拼音化，其来源于一项便于汉族学习哈萨克语的语言实验，致力于解决哈萨克语文字输入问题。哈拼目前主要由三个大项构成，即 **哈拼标准化**、**哈拼输入法支持**、**哈拼开发工具**。
 
