@@ -1,10 +1,12 @@
 ---
 hero:
   title: 哈拼
-  desc: 哈萨克语拼音化
+  description: 哈萨克语拼音化
   actions:
     - text: 快速上手
-      link: /getting-started
+      link: /zh-CN/getting-started
+    - text: 演练场
+      link: /zh-CN/components/playground
     - text: 加入 Discord
       link: https://discord.gg/aU2BsjSqhq
 ---
