@@ -1,4 +1,8 @@
-# Hapin Cyrillic
+---
+title: 哈拼西里尔字母方案
+---
+
+## 哈拼西里尔字母方案
 
 [![GitHub](https://img.shields.io/badge/GtHub-hapin--cyrillic-lightgrey)](https://github.com/ha-pin/hapin-cyrillic)&nbsp;
 ![LICENSE](https://img.shields.io/github/license/ha-pin/hapin-cyrillic) &nbsp;

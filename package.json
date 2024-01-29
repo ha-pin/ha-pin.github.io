@@ -4,7 +4,8 @@
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
-    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\""
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "prepare": "dumi setup"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -21,10 +22,10 @@
     ]
   },
   "devDependencies": {
-    "@umijs/plugin-esbuild": "^1.4.1",
-    "dumi": "^1.0.13",
+    "dumi": "^2.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
+    "typescript": "^5.3.3",
     "yorkie": "^2.0.0"
   },
   "dependencies": {}

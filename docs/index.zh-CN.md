@@ -7,7 +7,6 @@ hero:
       link: /getting-started
     - text: 加入 Discord
       link: https://discord.gg/aU2BsjSqhq
-  footer: Copyright &copy; 2023 [Hapin](https://github.com/ha-pin) All Rights Reserved <br />Powered by [dumi](https://d.umijs.org)
 ---
 
 ## 你好，哈拼

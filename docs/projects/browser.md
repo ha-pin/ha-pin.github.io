@@ -1,6 +1,7 @@
 ---
 nav:
   title: Browser Support
+order: 1
 ---
 
 ## Browser Support

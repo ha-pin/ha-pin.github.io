@@ -1,4 +1,5 @@
 ---
+title: 小程序支持
 nav:
   title: 小程序支持
 order: 2
