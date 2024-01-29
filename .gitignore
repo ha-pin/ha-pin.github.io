@@ -12,9 +12,10 @@
 # misc
 .DS_Store
 
-# umi
-.umi
-.umi-production
+# dumi
+.dumi/tmp
+.dumi/tmp-test
+.dumi/tmp-production
 .env.local
 
 # ide

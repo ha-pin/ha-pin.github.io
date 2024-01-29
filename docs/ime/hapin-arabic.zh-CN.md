@@ -1,4 +1,8 @@
-# Hapin Arabic
+---
+title: 哈拼老文字方案
+---
+
+## 哈拼老文字方案
 
 [![GitHub](https://img.shields.io/badge/GtHub-hapin--arabic-lightgrey)](https://github.com/ha-pin/hapin-arabic)&nbsp;
 ![LICENSE](https://img.shields.io/github/license/ha-pin/hapin-arabic) &nbsp;

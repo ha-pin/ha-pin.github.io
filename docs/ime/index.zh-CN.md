@@ -1,4 +1,5 @@
 ---
+title: 输入法支持
 nav:
   title: 输入法支持
   order: 3

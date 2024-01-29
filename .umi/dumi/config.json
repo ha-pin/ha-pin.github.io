@@ -1,0 +1,295 @@
+{
+  "menus": {
+    "en-US": {
+      "/getting-started": [
+        {
+          "path": "/getting-started",
+          "title": "Getting Started",
+          "meta": {}
+        }
+      ],
+      "*": [
+        {
+          "path": "/",
+          "title": "Hello Hapin",
+          "meta": {}
+        }
+      ],
+      "/developer": [
+        {
+          "path": "/developer",
+          "title": "For Developer",
+          "meta": {
+            "order": 1
+          }
+        },
+        {
+          "path": "/developer/hapin-utils",
+          "title": "Hapin Utils",
+          "meta": {
+            "order": 2
+          }
+        },
+        {
+          "path": "/developer/hapin-dict",
+          "title": "Hapin Dict",
+          "meta": {}
+        },
+        {
+          "path": "/developer/hapin-tools",
+          "title": "Hapin Tools",
+          "meta": {}
+        },
+        {
+          "path": "/developer/hapin-utils-rs",
+          "title": "Hapin Utils for Rust",
+          "meta": {}
+        }
+      ],
+      "/ime": [
+        {
+          "path": "/ime",
+          "title": "IME Support",
+          "meta": {}
+        },
+        {
+          "path": "/ime/hapin-arabic",
+          "title": "Hapin Arabic",
+          "meta": {}
+        },
+        {
+          "path": "/ime/hapin-cyrillic",
+          "title": "Hapin Cyrillic",
+          "meta": {}
+        }
+      ],
+      "/projects": [
+        {
+          "path": "/projects",
+          "title": "Projects",
+          "meta": {
+            "order": 1
+          }
+        },
+        {
+          "path": "/projects/miniprogram",
+          "title": "Miniprogram",
+          "meta": {
+            "order": 2
+          }
+        },
+        {
+          "path": "/projects/browser",
+          "title": "Browser Support",
+          "meta": {}
+        }
+      ],
+      "/standardize": [
+        {
+          "path": "/standardize",
+          "title": "The Standardization of Hapin",
+          "meta": {}
+        }
+      ],
+      "/getting-started/": [
+        {
+          "title": "Getting Started"
+        }
+      ],
+      "/standardarize/": [
+        {
+          "title": "Standardarize"
+        }
+      ],
+      "/projects/": [
+        {
+          "title": "Projects"
+        }
+      ]
+    },
+    "zh-CN": {
+      "/zh-CN/getting-started": [
+        {
+          "path": "/zh-CN/getting-started",
+          "title": "快速上手",
+          "meta": {}
+        }
+      ],
+      "*": [
+        {
+          "path": "/zh-CN",
+          "title": "你好，哈拼",
+          "meta": {}
+        }
+      ],
+      "/zh-CN/developer": [
+        {
+          "path": "/zh-CN/developer",
+          "title": "技术开源",
+          "meta": {
+            "order": 1
+          }
+        },
+        {
+          "path": "/zh-CN/developer/hapin-utils",
+          "title": "Hapin Utils",
+          "meta": {
+            "order": 2
+          }
+        },
+        {
+          "path": "/zh-CN/developer/hapin-dict",
+          "title": "Hapin Dict",
+          "meta": {}
+        },
+        {
+          "path": "/zh-CN/developer/hapin-tools",
+          "title": "Hapin Tools",
+          "meta": {}
+        },
+        {
+          "path": "/zh-CN/developer/hapin-utils-rs",
+          "title": "Hapin Utils for Rust",
+          "meta": {}
+        }
+      ],
+      "/zh-CN/ime": [
+        {
+          "path": "/zh-CN/ime",
+          "title": "输入法支持",
+          "meta": {}
+        },
+        {
+          "path": "/zh-CN/ime/hapin-arabic",
+          "title": "Hapin Arabic",
+          "meta": {}
+        },
+        {
+          "path": "/zh-CN/ime/hapin-cyrillic",
+          "title": "Hapin Cyrillic",
+          "meta": {}
+        }
+      ],
+      "/zh-CN/projects": [
+        {
+          "path": "/zh-CN/projects",
+          "title": "衍生项目",
+          "meta": {
+            "order": 1
+          }
+        },
+        {
+          "path": "/zh-CN/projects/miniprogram",
+          "title": "小程序支持",
+          "meta": {
+            "order": 2
+          }
+        },
+        {
+          "path": "/zh-CN/projects/browser",
+          "title": "浏览器支持",
+          "meta": {}
+        }
+      ],
+      "/zh-CN/standardize": [
+        {
+          "path": "/zh-CN/standardize",
+          "title": "哈拼标准化",
+          "meta": {}
+        }
+      ],
+      "/zh-CN/getting-started/": [
+        {
+          "title": "快速上手"
+        }
+      ],
+      "/zh-CN/standardarize/": [
+        {
+          "title": "哈拼标准化"
+        }
+      ],
+      "/zh-CN/projects/": [
+        {
+          "title": "衍生项目"
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    },
+    {
+      "name": "zh-CN",
+      "label": "中文"
+    }
+  ],
+  "navs": {
+    "en-US": [
+      {
+        "title": "Getting Started",
+        "order": 1,
+        "path": "/getting-started"
+      },
+      {
+        "title": "Standardize",
+        "order": 2,
+        "path": "/standardize"
+      },
+      {
+        "path": "/ime",
+        "title": "IME Support",
+        "order": 3
+      },
+      {
+        "title": "Miniprogram",
+        "path": "/projects"
+      },
+      {
+        "path": "/developer",
+        "title": "For Developer"
+      },
+      {
+        "title": "GitHub",
+        "path": "https://github.com/ha-pin"
+      }
+    ],
+    "zh-CN": [
+      {
+        "title": "快速上手",
+        "order": 1,
+        "path": "/zh-CN/getting-started"
+      },
+      {
+        "title": "哈拼标准化",
+        "order": 2,
+        "path": "/zh-CN/standardize"
+      },
+      {
+        "path": "/zh-CN/ime",
+        "title": "输入法支持",
+        "order": 3
+      },
+      {
+        "title": "小程序支持",
+        "path": "/zh-CN/projects"
+      },
+      {
+        "path": "/zh-CN/developer",
+        "title": "开发支持"
+      },
+      {
+        "title": "GitHub",
+        "path": "https://github.com/ha-pin"
+      }
+    ]
+  },
+  "title": "哈拼 Hapin حاپين",
+  "mode": "site",
+  "repository": {
+    "url": "",
+    "branch": "master"
+  },
+  "theme": {}
+}

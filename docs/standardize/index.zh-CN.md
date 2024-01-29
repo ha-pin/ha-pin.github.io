@@ -1,4 +1,5 @@
 ---
+title: 标准化
 nav:
   title: 哈拼标准化
   order: 2
