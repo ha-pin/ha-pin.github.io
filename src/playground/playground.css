@@ -1,0 +1,34 @@
+.keyboard {
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.key-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border: 1px sloid black;
+}
+
+.key {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px grey;
+}
+
+.key-active {
+  background-color: rgba(0, 0, 0, 0.1);
+}

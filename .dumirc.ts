@@ -31,6 +31,10 @@ export default defineConfig({
           link: '/zh-CN/standardize',
         },
         {
+          title: '演练场',
+          link: '/zh-CN/components/playground',
+        },
+        {
           title: '输入法',
           link: '/zh-CN/ime',
         },
@@ -51,6 +55,10 @@ export default defineConfig({
         {
           title: 'Standardize',
           link: '/standardize',
+        },
+        {
+          title: 'Playground',
+          link: '/components/playground',
         },
         {
           title: 'IME',

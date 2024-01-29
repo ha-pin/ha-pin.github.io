@@ -1,10 +1,12 @@
 ---
 hero:
   title: Hapin
-  desc: The Alphabetization of Kazakh language
+  description: The Alphabetization of Kazakh language
   actions:
     - text: Getting Started
       link: /getting-started
+    - text: Playground
+      link: /components/playground
     - text: Join Discord
       link: https://discord.gg/aU2BsjSqhq
 ---
