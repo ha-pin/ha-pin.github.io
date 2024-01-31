@@ -1,7 +1,7 @@
 ---
-nav:
-  title: Standardize
-  order: 2
+title: Standardize v1
+group: standardize
+toc: content
 ---
 
 ## The Standardization of Hapin
