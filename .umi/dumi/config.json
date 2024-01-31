@@ -288,8 +288,8 @@
   "title": "哈拼 Hapin حاپين",
   "mode": "site",
   "repository": {
-    "url": "",
-    "branch": "master"
+    "url": "https://github.com/ha-pin/ha-pin.github.io",
+    "branch": "main"
   },
   "theme": {}
 }

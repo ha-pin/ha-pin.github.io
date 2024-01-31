@@ -19,7 +19,11 @@ const qwerty_keyboard = [
   ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '?'],
 ];
 
+// TODO 映射
+const hapin_mapping = new Map([['', []]]);
+
 export default function Playground() {
+  // ! 改成 before 更简单逻辑实现
   const [hapin, setHapin] = useState<string>();
   const [lang, setLang] = useState<string>('en-US');
   const [double, setDouble] = useState<string>();
@@ -132,16 +136,15 @@ export default function Playground() {
       </div>
       <div>
         <p>
-          当前激活哈拼方案为: <code>{hapin}</code>
+          当前激活哈拼方案为: <code className="hapin">{hapin}</code>
         </p>
         <p>
-          对应老文字: <code></code>
+          对应老文字: <code className="arabic"></code>
         </p>
         <p>
-          对应西里尔字母: <code></code>
+          对应西里尔字母: <code className="cyrillic"></code>
         </p>
       </div>
-      {/* TODO 绘制可视化键盘 */}
     </div>
   );
 }

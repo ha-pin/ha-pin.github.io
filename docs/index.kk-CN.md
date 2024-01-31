@@ -1,15 +1,17 @@
 ---
 hero:
-  title: Hapin
+  title: قاپين
   description: The Alphabetization of Kazakh language
   actions:
     - text: Getting Started
       link: /getting-started
     - text: Playground
       link: /components/playground
+    - text: Join Discord
+      link: https://discord.gg/aU2BsjSqhq
 ---
 
-## Hello Hapin
+## سالەم حاپين
 
 Hapin, which means "The alphabetization of kazakh language". It came from a kazakh language experiment about how to make it easy for the Hans to learn kazakh language and how to input kazakh language (The Persian alphabet based) via simple keyboard. Recently, Hapin project is composed of **The Standardization of Hapin**, **Input Method Support** and **Hapin Developer Tools**.
 

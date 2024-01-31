@@ -10,11 +10,14 @@ export default defineConfig({
       id: 'zh-CN',
       name: '中文',
     },
-    // { id: 'kz', name: 'قازاقشا' }
+    // { id: 'kk-CN', name: 'قازاقشا' },
+    // {
+    //   id: "kk-KZ", name: "қазақ тілі"
+    // }
   ],
   themeConfig: {
-    name: '哈拼 Hapin حاپين',
-    footer: `Copyright &copy; 2024 <a href="https://github.com/ha-pin">Hapin</a> All Rights Reserved <br />Powered by <a href="https://d.umijs.org">dumi</a>`,
+    logo: false,
+    footer: `Copyright &copy; 2024 <a href="https://github.com/ha-pin">Hapin</a> All Rights Reserved<br/ >Want to discuss? &gt; <a href="https://discord.gg/aU2BsjSqhq">Join Discord</a> &lt; <br />Powered by <a href="https://d.umijs.org">dumi</a>`,
     showLineNum: true,
     perfersColor: { default: 'auto', switch: true },
     socialLinks: {
@@ -48,6 +51,58 @@ export default defineConfig({
         },
       ],
       'en-US': [
+        {
+          title: 'Getting Started',
+          link: '/getting-started',
+        },
+        {
+          title: 'Standardize',
+          link: '/standardize',
+        },
+        {
+          title: 'Playground',
+          link: '/components/playground',
+        },
+        {
+          title: 'IME',
+          link: '/ime',
+        },
+        {
+          title: 'Development',
+          link: '/developer',
+        },
+        {
+          title: 'Projects',
+          link: '/projects',
+        },
+      ],
+      'kk-CN': [
+        {
+          title: 'Getting Started',
+          link: '/getting-started',
+        },
+        {
+          title: 'Standardize',
+          link: '/standardize',
+        },
+        {
+          title: 'Playground',
+          link: '/components/playground',
+        },
+        {
+          title: 'IME',
+          link: '/ime',
+        },
+        {
+          title: 'Development',
+          link: '/developer',
+        },
+        {
+          title: 'Projects',
+          link: '/projects',
+        },
+      ],
+      'kk-KZ': [
         {
           title: 'Getting Started',
           link: '/getting-started',
