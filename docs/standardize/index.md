@@ -14,15 +14,15 @@ The Standardization of Hapin goes through **Hapin Experimental Scheme Stage (v0.
 
 The content of this part was open-sourced under `GPL-3.0` license, GitHub: [ha-pin/rime-kz-experiment](https://github.com/ha-pin/rime-kz-experiment).
 
-You can get the commit history by visiting the GitHub repo.
+You can get the commits history by visiting the GitHub repo.
 
-You can get the development history by the post of Liandi forum:
+You can get the development history by the post:
 
-- [《基于 Rime 的哈拼 Hapin 输入方案设计》](https://ld246.com/article/1643308814896)
+- [《基于 Rime 的哈拼 Hapin 输入方案设计》](/posts/hapin-scheme-design-based-on-rime)
 
 ## Hapin Offical Scheme
 
-### Hapin Alphabet
+### Hapin Single Alphabets
 
 | Hapin scheme | The Persian-Arabic Alphabet | The Cyrillic Alphabet |
 | ------------ | --------------------------- | --------------------- |
@@ -49,12 +49,22 @@ You can get the development history by the post of Liandi forum:
 | v            | ۆ                           | В в                   |
 | w            | ۋ                           | У у                   |
 | z            | ز                           | З з                   |
+
+## Hapin Double Alphabets
+
+| Hapin scheme | The Persian-Arabic Alphabet | The Cyrillic Alphabet |
+| ------------ | --------------------------- | --------------------- |
 | ye           | ە                           | Е е                   |
 | gh           | ع                           | Ғ ғ                   |
 | hh           | ھ                           | Һ һ                   |
 | ng           | ڭ                           | Ң ң                   |
 | sh           | ش                           | Ш ш                   |
 | ch           | چ                           | Ч ч                   |
+
+## Hapin Alphabets with The Weak Tone
+
+| Hapin scheme | The Persian-Arabic Alphabet | The Cyrillic Alphabet |
+| ------------ | --------------------------- | --------------------- |
 | xa           | ٴا                          | Ә ә                   |
 | xe           | ٴى                          | І і                   |
 | xo           | ٴو                          | Ө ө                   |
@@ -77,27 +87,14 @@ You can get the development history by the post of Liandi forum:
 
 | Hapin scheme | The Persian-Arabic Alphabet | The Cyrillic Alphabet |
 | ------------ | --------------------------- | --------------------- |
-| io           | يو                          | Ё ё                   |
-| i            | ي                           | И и                   |
+| io / yo      | يو                          | Ё ё                   |
+| i / yi       | ي                           | И и                   |
 | shsh         | شش                          | Щ щ                   |
-| ts           | تس                          | Ц ц                   |
+| ts / c       | تس                          | Ц ц                   |
 | xx           | --                          | Ъ ъ                   |
 | xy           | --                          | Ь ь                   |
 | ye           | ە                           | Э э                   |
-| iw           | يۋ                          | Ю ю                   |
-| ia           | يا                          | Я я                   |
-
-### Only for The Cyrillic Alphabet
-
-Due to the reason that the Kazakh Pronunciation and Alphabet are not the exactly the same between Kazakhstan and Xinjiang, China. So the following Scheme only supports **The Cyrillic Alphabet** which used by Kazakhstan.
-
-| Hapin scheme | The Persian-Arabic Alphabet | The Cyrillic Alphabet |
-| ------------ | --------------------------- | --------------------- |
-| zh           | ج                           | Ж ж                   |
-| yo           | يو                          | Ё ё                   |
-| yi           | ي                           | И и                   |
-| c            | تس                          | Ц ц                   |
-| yw           | يۋ                          | Ю ю                   |
-| ya           | يا                          | Я я                   |
+| iw / yw      | يۋ                          | Ю ю                   |
+| ia / ya      | يا                          | Я я                   |
 
 > **It should be noted that:** `hapin-arabic` would not support the the above-mentioned(Only for The Cyrillic Alphabet) scheme. And the homologous alphabet of `И и` is `ٴى` before, but now is `ي`.
