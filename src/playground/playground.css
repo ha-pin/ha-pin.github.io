@@ -40,3 +40,35 @@
 [data-prefers-color="dark"] .key-active {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+.res-hapin,
+.res-cyrillic {
+  font-size: xx-large;
+}
+
+.res-arabic {
+  font-size: 50px;
+}
+
+.res-hapin,
+.res-cyrillic,
+.res-arabic {
+  margin-left: 20px;;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  min-height: 60px;
+  min-width: 60px;
+  text-align: center;
+  vertical-align: center;
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+[data-prefers-color="dark"] .res-hapin,
+[data-prefers-color="dark"] .res-cyrillic,
+[data-prefers-color="dark"] .res-arabic {
+  background-color: rgba(255, 255, 255, 0.2);
+}
