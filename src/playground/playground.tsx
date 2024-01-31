@@ -7,15 +7,19 @@ const words = {
     title: '哈拼演练场',
     desc: '哈拼演练场是为初学者准备的直观练习',
     hapin: '哈拼方案',
-    arabic: '老文字',
+    arabic: '老文字字母',
     cyrillic: '西里尔字母',
+    x: 'X 模式: 哈拼在借鉴老文字对于弱音符号的处理上创造了 X 模式, 例如: xa 相当于是在 a 添加了弱音符号修饰符。支持的修饰的字母仅有: xa, xe, xo, xu 构成与老文字一致。另外为了对西里尔字母的兼容, xx 表示 Ъ ъ, xy 表示 Ь ь',
+    y: 'Y 模式: 哈拼为了支持汉语同音的 ye 和哈萨克斯坦现行西里尔字母, 创造了 Y 模式。这也就意味着, 除了输入音 ye 之外, 其余 Y 模式字母全都为西里尔哈萨克语特有字母, 仅有: yi, yo, yw, ya',
   },
   'en-US': {
     title: 'Hapin Playground',
-    desc: '',
+    desc: 'Hapin playground is the practice for beginners',
     hapin: 'Hapin Scheme',
     arabic: 'The Persian-Arabic Alphabet',
     cyrillic: 'The Cyrillic Alphabet',
+    x: 'X Mode:',
+    y: 'Y Mode:',
   },
 };
 
@@ -25,7 +29,6 @@ const qwerty_keyboard = [
   ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '?'],
 ];
 
-// TODO 映射
 const hapin_maping = new Map([
   ['a', ['ا', 'А а']],
   ['b', ['ب', 'Б б']],
@@ -34,7 +37,7 @@ const hapin_maping = new Map([
   ['f', ['ف', 'Ф ф']],
   ['g', ['گ', 'Г г']],
   ['h', ['ح', 'Х х']],
-  ['i', ['ي', 'Й й И и']],
+  ['i', ['ي', 'Й й']],
   ['j', ['ج', 'Ж ж']],
   ['k', ['ك', 'К к']],
   ['l', ['ل', 'Л л']],
@@ -64,9 +67,18 @@ const hapin_maping = new Map([
   [',', ['،', ',']],
   ['?', ['؟', '?']],
   [';', ['	؛', ';']],
+  ['io', ['يو', 'Ё ё']],
+  ['yo', ['يو', 'Ё ё']],
+  ['yi', ['ي', 'И и']],
+  ['ts', ['تس', 'Ц ц']],
+  ['c', ['تس', 'Ц ц']],
+  ['iw', ['يۋ', '	Ю ю']],
+  ['yw', ['يۋ', '	Ю ю']],
+  ['ia', ['يا', 'Я я']],
+  ['ya', ['يا', 'Я я']],
 ]);
 
-const double_chars = ['x', 'y', 'g', 'h', 'n', 's', 'c'];
+const double_chars = ['x', 'y', 'g', 'h', 'n', 's', 'c', 'i', 't'];
 
 const double_valid = [
   'ye',
@@ -80,6 +92,14 @@ const double_valid = [
   'xo',
   'xu',
   'yu',
+  'io',
+  'yo',
+  'yi',
+  'ts',
+  'iw',
+  'yw',
+  'ia',
+  'ya',
 ];
 
 export default function Playground() {
@@ -101,6 +121,8 @@ export default function Playground() {
       const { key } = ev;
       const _hapin = window._hapin;
 
+      deactiveAllKeys();
+
       if (/^[a-zA-Z,;\?]{1}$/.test(key)) {
         if (
           _hapin?.length === 1 &&
@@ -109,12 +131,9 @@ export default function Playground() {
         ) {
           setHapin(`${_hapin}${key}`);
         } else {
-          // 否则直接渲染单参数，并且清空 before
-          // ! 需要修复
+          // TODO 对于 before 参数的衍生
           setBefore(hapin);
-          // deactiveKey(before)
           setHapin(key);
-          activeKey(key);
         }
       }
     });
@@ -134,8 +153,10 @@ export default function Playground() {
     document.getElementById(`key-${k}`)?.classList.add('key-active');
   };
 
-  const deactiveKey = (k: string) => {
-    document.getElementById(`key-${k}`)?.classList.remove('key-active');
+  const deactiveAllKeys = () => {
+    [...document.getElementsByClassName(`key-active`)].forEach((d) =>
+      d.classList.remove('key-active'),
+    );
   };
 
   return (
@@ -155,17 +176,21 @@ export default function Playground() {
           </ul>
         ))}
       </div>
-      <div>
-        <p>
-          {words[lang].hapin}: <code className="res-hapin">{hapin}</code>
-        </p>
-        <p>
-          {words[lang].arabic}: <code className="res-arabic">{maped[0]}</code>
-        </p>
-        <p>
-          {words[lang].cyrillic}:{' '}
+      <div className="maping">
+        <div className="maping-item">
+          <span>{words[lang].hapin}: </span>
+          <code className="res-hapin">{hapin}</code>
+        </div>
+        {hapin === 'x' && <div>{words[lang].x}</div>}
+        {hapin === 'y' && <div>{words[lang].y}</div>}
+        <div className="maping-item">
+          <span>{words[lang].arabic}: </span>
+          <code className="res-arabic">{maped[0]}</code>
+        </div>
+        <div className="maping-item">
+          <span>{words[lang].cyrillic}: </span>
           <code className="res-cyrillic">{maped[1]}</code>
-        </p>
+        </div>
       </div>
     </div>
   );
