@@ -17,9 +17,9 @@ nav:
 
 你可以在 GitHub 仓库查看项目更改记录。
 
-你可以在链滴社区了解哈拼的发展历程：
+你可以查看这个帖子了解哈拼的发展历程：
 
-- [《基于 Rime 的哈拼 Hapin 输入方案设计》](https://ld246.com/article/1643308814896)
+- [《基于 Rime 的哈拼 Hapin 输入方案设计》](/posts/hapin-scheme-design-based-on-rime)
 
 ## 哈拼正式版
 
