@@ -3,6 +3,8 @@ title: Playground
 sidebar: false
 ---
 
-> WIP Developing
+:::warning
+WIP Developing
+:::
 
 <code src="./playground.tsx"></code>
