@@ -13,3 +13,4 @@ title: 哈拼西里尔字母方案
 ## 下载方案
 
 - [GitHub Releases](https://github.com/ha-pin/hapin-cyrillic/releases)
+- [Mirror](https://mirror.ghproxy.com/https://github.com/ha-pin/hapin-cyrillic/archive/refs/tags/v1.x-alpha.zip)

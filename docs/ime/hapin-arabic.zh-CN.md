@@ -13,6 +13,7 @@ title: 哈拼老文字方案
 ## 下载方案
 
 - [GitHub Releases](https://github.com/ha-pin/hapin-arabic/releases)
+- [Mirror](https://mirror.ghproxy.com/https://github.com/ha-pin/hapin-arabic/archive/refs/tags/v1.2.zip)
 
 ## 注意事项
 
