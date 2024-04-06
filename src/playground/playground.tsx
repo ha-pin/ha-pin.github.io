@@ -6,6 +6,7 @@ const words = {
   'zh-CN': {
     title: '哈拼演练场',
     desc: '哈拼演练场是为初学者准备的直观练习',
+    isMobile: '为了更好的体验，请使用PC打开',
     hapin: '哈拼方案',
     arabic: '老文字字母',
     cyrillic: '西里尔字母',
@@ -15,6 +16,7 @@ const words = {
   'en-US': {
     title: 'Hapin Playground',
     desc: 'Hapin playground is the practice for beginners',
+    isMobile: 'Please use PC to experience better',
     hapin: 'Hapin Scheme',
     arabic: 'The Persian-Arabic Alphabet',
     cyrillic: 'The Cyrillic Alphabet',
@@ -107,6 +109,7 @@ export default function Playground() {
   const [lang, setLang] = useState<string>('en-US');
   const [maped, setMaped] = useState<string[]>([]);
   const hapinRef = useRef<string>();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     if (location.pathname.split('/')[1] === 'zh-CN') {
@@ -117,21 +120,11 @@ export default function Playground() {
 
     window.addEventListener('keypress', (ev) => {
       const { key } = ev;
-      const _hapin = hapinRef.current;
+      handleKeyPress(key);
+    });
 
-      deactiveAllKeys();
-
-      if (/^[a-zA-Z,;\?]{1}$/.test(key)) {
-        if (
-          _hapin?.length === 1 &&
-          double_chars.includes(_hapin) &&
-          double_valid.includes(`${_hapin}${key}`)
-        ) {
-          setHapin(`${_hapin}${key}`);
-        } else {
-          setHapin(key);
-        }
-      }
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 768);
     });
   }, []);
 
@@ -155,39 +148,77 @@ export default function Playground() {
     );
   };
 
+  const handleKeyPress = (key: string) => {
+    const _hapin = hapinRef.current;
+
+    deactiveAllKeys();
+
+    if (/^[a-zA-Z,;\?]{1}$/.test(key)) {
+      if (
+        _hapin?.length === 1 &&
+        double_chars.includes(_hapin) &&
+        double_valid.includes(`${_hapin}${key}`)
+      ) {
+        setHapin(`${_hapin}${key}`);
+      } else {
+        setHapin(key);
+      }
+    }
+  };
+
+  const handleKeyClick = (k: string) => {
+    handleKeyPress(k);
+  };
+
   return (
     <div>
       <div>
         <h1>{words[lang].title}</h1>
         <p>{words[lang].desc}</p>
       </div>
-      <div className="keyboard">
-        {qwerty_keyboard.map((row, idx) => (
-          <ul key={`key-row-${idx}`} id={`key-row-${idx}`} className="key-row">
-            {row.map((k) => (
-              <li className="key" key={`key-${k}`} id={`key-${k}`}>
-                {k}
-              </li>
+      {!isMobile && (
+        <>
+          <div className="keyboard">
+            {qwerty_keyboard.map((row, idx) => (
+              <ul
+                key={`key-row-${idx}`}
+                id={`key-row-${idx}`}
+                className="key-row"
+              >
+                {row.map((k) => (
+                  <li
+                    className="key"
+                    key={`key-${k}`}
+                    id={`key-${k}`}
+                    onClick={() => {
+                      handleKeyClick(k);
+                    }}
+                  >
+                    {k}
+                  </li>
+                ))}
+              </ul>
             ))}
-          </ul>
-        ))}
-      </div>
-      <div className="maping">
-        <div className="maping-item">
-          <span>{words[lang].hapin}: </span>
-          <code className="res-hapin">{hapin}</code>
-        </div>
-        {hapin === 'x' && <div>{words[lang].x}</div>}
-        {hapin === 'y' && <div>{words[lang].y}</div>}
-        <div className="maping-item">
-          <span>{words[lang].arabic}: </span>
-          <code className="res-arabic">{maped[0]}</code>
-        </div>
-        <div className="maping-item">
-          <span>{words[lang].cyrillic}: </span>
-          <code className="res-cyrillic">{maped[1]}</code>
-        </div>
-      </div>
+          </div>
+          <div className="maping">
+            <div className="maping-item">
+              <span>{words[lang].hapin}: </span>
+              <code className="res-hapin">{hapin}</code>
+            </div>
+            {hapin === 'x' && <div>{words[lang].x}</div>}
+            {hapin === 'y' && <div>{words[lang].y}</div>}
+            <div className="maping-item">
+              <span>{words[lang].arabic}: </span>
+              <code className="res-arabic">{maped[0]}</code>
+            </div>
+            <div className="maping-item">
+              <span>{words[lang].cyrillic}: </span>
+              <code className="res-cyrillic">{maped[1]}</code>
+            </div>
+          </div>
+        </>
+      )}
+      {isMobile && <div>{words[lang].isMobile}</div>}
     </div>
   );
 }
