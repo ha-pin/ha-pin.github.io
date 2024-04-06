@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import './playground.css';
 
@@ -103,14 +103,12 @@ const double_valid = [
 ];
 
 export default function Playground() {
-  // ! 改成 before 更简单逻辑实现
-  const [before, setBefore] = useState<string>();
   const [hapin, setHapin] = useState<string>();
   const [lang, setLang] = useState<string>('en-US');
   const [maped, setMaped] = useState<string[]>([]);
+  const hapinRef = useRef<string>();
 
   useEffect(() => {
-    // TODO 支持更多的语言
     if (location.pathname.split('/')[1] === 'zh-CN') {
       setLang('zh-CN');
     } else {
@@ -119,7 +117,7 @@ export default function Playground() {
 
     window.addEventListener('keypress', (ev) => {
       const { key } = ev;
-      const _hapin = window._hapin;
+      const _hapin = hapinRef.current;
 
       deactiveAllKeys();
 
@@ -131,8 +129,6 @@ export default function Playground() {
         ) {
           setHapin(`${_hapin}${key}`);
         } else {
-          // TODO 对于 before 参数的衍生
-          setBefore(hapin);
           setHapin(key);
         }
       }
@@ -140,7 +136,7 @@ export default function Playground() {
   }, []);
 
   useEffect(() => {
-    window._hapin = hapin;
+    hapinRef.current = hapin;
     if (!!hapin && hapin_maping.has(hapin)) {
       setMaped(hapin_maping.get(hapin) as string[]);
       hapin.split('').forEach((k) => activeKey(k));
