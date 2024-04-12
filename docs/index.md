@@ -7,6 +7,8 @@ hero:
       link: /getting-started
     - text: Playground
       link: /components/playground
+    - text: Join Discord
+      link: https://discord.gg/aU2BsjSqhq
 ---
 
 ## Hello Hapin
