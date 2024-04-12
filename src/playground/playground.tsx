@@ -11,7 +11,7 @@ const words = {
     arabic: '老文字字母',
     cyrillic: '西里尔字母',
     x: 'X 模式: 哈拼在借鉴老文字对于弱音符号的处理上创造了 X 模式, 例如: xa 相当于是在 a 添加了弱音符号修饰符。支持的修饰的字母仅有: xa, xe, xo, xu 构成与老文字一致。另外为了对西里尔字母的兼容, xx 表示 Ъ ъ, xy 表示 Ь ь',
-    y: 'Y 模式: 哈拼为了支持汉语同音的 ye、yu (同 xu) 和哈萨克斯坦现行西里尔字母, 创造了 Y 模式。这也就意味着, 除了输入音 ye、yu (同 xu) 之外, 其余 Y 模式字母全都为西里尔哈萨克语特有字母, 仅有: yi, yo, yw, ya',
+    y: 'Y 模式: 哈拼为了支持汉语同音的 ye、yu (同 xu) 和哈萨克斯坦现行西里尔字母, 创造了 Y 模式。这也就意味着, 除了输入音 ye、yu (同 xu) 之外, 其余 Y 模式字母全都为西里尔哈萨克语特有字母, 仅有: yi, yo, yw, ya, yy',
   },
   'en-US': {
     title: 'Hapin Playground',
@@ -78,6 +78,9 @@ const hapin_maping = new Map([
   ['yw', ['يۋ', '	Ю ю']],
   ['ia', ['يا', 'Я я']],
   ['ya', ['يا', 'Я я']],
+  ['yy', ['--', 'Э э']],
+  ['xx', ['--', 'Ъ ъ']],
+  ['xy', ['--', 'Ь ь']],
 ]);
 
 const double_chars = ['x', 'y', 'g', 'h', 'n', 's', 'c', 'i', 't'];
@@ -102,6 +105,9 @@ const double_valid = [
   'yw',
   'ia',
   'ya',
+  'yy',
+  'xx',
+  'xy',
 ];
 
 export default function Playground() {
