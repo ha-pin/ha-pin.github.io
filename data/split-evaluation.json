@@ -1,0 +1,119 @@
+{
+  "interpretation": "Current legacy profile versus context-v1 on source-labelled word entries; not independent held-out accuracy",
+  "sources": {
+    "arabic": {
+      "words": 58632,
+      "sha256": "733db68f8f57b08ae235baf5c8ceadef2aa57ed6d04792c0db9b4003cd61edd5"
+    },
+    "cyrillic": {
+      "words": 8953,
+      "sha256": "67dbfd034f031f870dab780a2eca514d7ac68b13bc5a7a3ea19168210bfa1d9b"
+    }
+  },
+  "patterns": {
+    "sh": {
+      "occurrences": 9042,
+      "beforeErrors": 49,
+      "afterErrors": 36,
+      "fixed": 13,
+      "regressed": 0,
+      "byLabel": {
+        "sh": {
+          "total": 9027,
+          "beforeCorrect": 8993,
+          "afterCorrect": 8993,
+          "candidateRecall": 9027
+        },
+        "s+h": {
+          "total": 15,
+          "beforeCorrect": 0,
+          "afterCorrect": 13,
+          "candidateRecall": 15
+        }
+      },
+      "regressions": []
+    },
+    "ng": {
+      "occurrences": 14113,
+      "beforeErrors": 333,
+      "afterErrors": 306,
+      "fixed": 27,
+      "regressed": 0,
+      "byLabel": {
+        "ng": {
+          "total": 13780,
+          "beforeCorrect": 13780,
+          "afterCorrect": 13780,
+          "candidateRecall": 13780
+        },
+        "n+g": {
+          "total": 333,
+          "beforeCorrect": 0,
+          "afterCorrect": 27,
+          "candidateRecall": 273
+        }
+      },
+      "regressions": []
+    },
+    "gh": {
+      "occurrences": 7267,
+      "beforeErrors": 0,
+      "afterErrors": 0,
+      "fixed": 0,
+      "regressed": 0,
+      "byLabel": {
+        "gh": {
+          "total": 7267,
+          "beforeCorrect": 7267,
+          "afterCorrect": 7267,
+          "candidateRecall": 7267
+        }
+      },
+      "regressions": []
+    },
+    "ngh": {
+      "occurrences": 467,
+      "beforeErrors": 458,
+      "afterErrors": 0,
+      "fixed": 458,
+      "regressed": 0,
+      "byLabel": {
+        "n+gh": {
+          "total": 458,
+          "beforeCorrect": 0,
+          "afterCorrect": 458,
+          "candidateRecall": 458
+        },
+        "ng+h": {
+          "total": 9,
+          "beforeCorrect": 9,
+          "afterCorrect": 9,
+          "candidateRecall": 9
+        }
+      },
+      "regressions": []
+    },
+    "hh": {
+      "occurrences": 31,
+      "beforeErrors": 1,
+      "afterErrors": 1,
+      "fixed": 0,
+      "regressed": 0,
+      "byLabel": {
+        "hh": {
+          "total": 30,
+          "beforeCorrect": 30,
+          "afterCorrect": 30,
+          "candidateRecall": 30
+        },
+        "h+h": {
+          "total": 1,
+          "beforeCorrect": 0,
+          "afterCorrect": 0,
+          "candidateRecall": 1
+        }
+      },
+      "regressions": []
+    }
+  }
+}

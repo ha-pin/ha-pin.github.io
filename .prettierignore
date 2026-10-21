@@ -4,3 +4,7 @@
 package.json
 .umi
 .umi-production
+
+# Generated examples preserve exact library output, including whitespace.
+docs/developer/examples.md
+docs/developer/examples.zh-CN.md

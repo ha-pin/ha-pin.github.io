@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": [".dumirc.ts", ".dumi/app.ts", "src/**/*.tsx", "typings.d.ts"],
+  "exclude": ["node_modules", ".umi", ".dumi/tmp", "dist"]
+}

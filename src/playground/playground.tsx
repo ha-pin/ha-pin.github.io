@@ -1,3 +1,4 @@
+import { useLocation } from 'dumi';
 import React, { useEffect, useRef, useState } from 'react';
 
 import './playground.css';
@@ -10,8 +11,8 @@ const words = {
     hapin: '哈拼方案',
     arabic: '老文字字母',
     cyrillic: '西里尔字母',
-    x: 'X 模式: 哈拼在借鉴老文字对于弱音符号的处理上创造了 X 模式, 例如: xa 相当于是在 a 添加了弱音符号修饰符。支持的修饰的字母仅有: xa, xe, xo, xu 构成与老文字一致。另外为了对西里尔字母的兼容, xx 表示 Ъ ъ, xy 表示 Ь ь',
-    y: 'Y 模式: 哈拼为了支持汉语同音的 ye、yu (同 xu) 和哈萨克斯坦现行西里尔字母, 创造了 Y 模式。这也就意味着, 除了输入音 ye、yu (同 xu) 之外, 其余 Y 模式字母全都为西里尔哈萨克语特有字母, 仅有: yi, yo, yw, ya, yy',
+    x: 'X 模式：xa、xe、xo、xu 表示前元音。xx、xy 是历史提案，当前工具包未实现为字母别名。',
+    y: 'Y 模式：ye 为字母，yu 是 xu 的别名；yi、yo、yw、ya 分别映射为 i、io、iw、ia。yy 尚未实现。',
   },
   'en-US': {
     title: 'Hapin Playground',
@@ -20,8 +21,8 @@ const words = {
     hapin: 'Hapin Scheme',
     arabic: 'The Persian-Arabic Alphabet',
     cyrillic: 'The Cyrillic Alphabet',
-    x: 'X Mode: Hapin has created X mode based on how to handle the weak tone with Arabic Alphabet, ex: xa means that we add weak tone symbol to the alphabet a.',
-    y: 'Y Mode:',
+    x: 'X mode: xa, xe, xo and xu represent front vowels. Historical xx/xy aliases are not implemented in the library.',
+    y: 'Y mode: ye is a letter; yu aliases xu. yi, yo, yw and ya map to i, io, iw and ia. yy is not implemented.',
   },
 };
 
@@ -61,8 +62,8 @@ const hapin_maping = new Map([
   ['ng', ['ڭ', 'Ң ң']],
   ['sh', ['ش', 'Ш ш']],
   ['ch', ['چ', 'Ч ч']],
-  ['xa', ['ٴا ', 'Ә ә']],
-  ['xe', ['ٴى ', 'І і']],
+  ['xa', ['ٴا', 'Ә ә']],
+  ['xe', ['ٴى', 'І і']],
   ['xo', ['ٴو', 'Ө ө']],
   ['xu', ['ٴۇ', 'Ү ү']],
   ['yu', ['ٴۇ', 'Ү ү']],
@@ -78,9 +79,6 @@ const hapin_maping = new Map([
   ['yw', ['يۋ', '	Ю ю']],
   ['ia', ['يا', 'Я я']],
   ['ya', ['يا', 'Я я']],
-  ['yy', ['--', 'Э э']],
-  ['xx', ['--', 'Ъ ъ']],
-  ['xy', ['--', 'Ь ь']],
 ]);
 
 const double_chars = ['x', 'y', 'g', 'h', 'n', 's', 'c', 'i', 't'];
@@ -105,33 +103,31 @@ const double_valid = [
   'yw',
   'ia',
   'ya',
-  'yy',
-  'xx',
-  'xy',
 ];
 
 export default function Playground() {
   const [hapin, setHapin] = useState<string>();
-  const [lang, setLang] = useState<string>('en-US');
+  const route = useLocation();
+  const lang: 'en-US' | 'zh-CN' =
+    route.pathname === '/zh-CN' || route.pathname.startsWith('/zh-CN/')
+      ? 'zh-CN'
+      : 'en-US';
   const [maped, setMaped] = useState<string[]>([]);
   const hapinRef = useRef<string>();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== 'undefined' && window.innerWidth < 768,
+  );
 
   useEffect(() => {
-    if (location.pathname.split('/')[1] === 'zh-CN') {
-      setLang('zh-CN');
-    } else {
-      setLang('en-US');
-    }
-
-    window.addEventListener('keypress', (ev) => {
-      const { key } = ev;
-      handleKeyPress(key);
-    });
-
-    window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 768);
-    });
+    const keypress = (ev: KeyboardEvent) =>
+      handleKeyPress(ev.key.toLowerCase());
+    const resize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('keypress', keypress);
+    window.addEventListener('resize', resize);
+    return () => {
+      window.removeEventListener('keypress', keypress);
+      window.removeEventListener('resize', resize);
+    };
   }, []);
 
   useEffect(() => {
@@ -155,6 +151,7 @@ export default function Playground() {
   };
 
   const handleKeyPress = (key: string) => {
+    key = key.toLowerCase();
     const _hapin = hapinRef.current;
 
     deactiveAllKeys();
@@ -215,7 +212,9 @@ export default function Playground() {
             {hapin === 'y' && <div>{words[lang].y}</div>}
             <div className="maping-item">
               <span>{words[lang].arabic}: </span>
-              <code className="res-arabic">{maped[0]}</code>
+              <code className="res-arabic" dir="rtl">
+                {maped[0]}
+              </code>
             </div>
             <div className="maping-item">
               <span>{words[lang].cyrillic}: </span>

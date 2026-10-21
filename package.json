@@ -3,9 +3,13 @@
   "name": "hapin",
   "scripts": {
     "start": "dumi dev",
-    "build": "dumi build",
+    "build": "dumi build && node scripts/legacy-redirects.mjs && node scripts/check-dist.mjs",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
-    "prepare": "dumi setup"
+    "prepare": "dumi setup",
+    "docs:sync": "node scripts/sync-examples.mjs",
+    "docs:check": "node scripts/check-docs.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.check.json",
+    "check": "yarn docs:check && yarn typecheck && yarn build"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -28,5 +32,6 @@
     "typescript": "^5.3.3",
     "yorkie": "^2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "packageManager": "yarn@1.22.22"
 }

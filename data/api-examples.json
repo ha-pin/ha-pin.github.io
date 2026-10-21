@@ -1,0 +1,219 @@
+{
+  "packageVersion": "5.0.0",
+  "releaseStatus": "stable",
+  "rulesVersion": "context-v1",
+  "examples": [
+    {
+      "id": "basic",
+      "input": "ara",
+      "options": {
+        "from": "hapin",
+        "to": "arabic"
+      },
+      "text": "ارا",
+      "status": "ok",
+      "units": ["a", "r", "a"],
+      "rules": ["alphabet"],
+      "diagnostics": []
+    },
+    {
+      "id": "ngh-prior",
+      "input": "arzangha",
+      "options": {
+        "from": "hapin",
+        "to": "arabic"
+      },
+      "text": "ارزانعا",
+      "status": "ambiguous",
+      "units": ["a", "r", "z", "a", "n", "gh", "a"],
+      "rules": ["alphabet", "ngh-prior"],
+      "diagnostics": ["ambiguous-segmentation"]
+    },
+    {
+      "id": "ngh-exception",
+      "input": "shanghai",
+      "options": {
+        "from": "hapin",
+        "to": "arabic"
+      },
+      "text": "شاڭحاي",
+      "status": "ambiguous",
+      "units": ["sh", "a", "ng", "h", "a", "i"],
+      "rules": ["alphabet", "ngh-source-exception"],
+      "diagnostics": ["ambiguous-segmentation"]
+    },
+    {
+      "id": "ngul-candidate",
+      "input": "amangul",
+      "options": {
+        "from": "hapin",
+        "to": "arabic"
+      },
+      "text": "امانگۇل",
+      "status": "ambiguous",
+      "units": ["a", "m", "a", "n", "g", "u", "l"],
+      "rules": ["alphabet", "ngul-context"],
+      "diagnostics": ["ambiguous-segmentation"]
+    },
+    {
+      "id": "ngye-conflict",
+      "input": "angye",
+      "options": {
+        "from": "hapin",
+        "to": "arabic"
+      },
+      "text": "اڭە",
+      "status": "ambiguous",
+      "units": ["a", "ng", "ye"],
+      "rules": ["alphabet", "ngye-conflict"],
+      "diagnostics": ["ambiguous-segmentation"]
+    },
+    {
+      "id": "source-ngh",
+      "input": "нғ",
+      "options": {
+        "from": "cyrillic",
+        "to": "arabic"
+      },
+      "text": "نع",
+      "status": "ok",
+      "units": ["n", "gh"],
+      "rules": [],
+      "diagnostics": []
+    },
+    {
+      "id": "source-ng-h",
+      "input": "ңх",
+      "options": {
+        "from": "cyrillic",
+        "to": "arabic"
+      },
+      "text": "ڭح",
+      "status": "ok",
+      "units": ["ng", "h"],
+      "rules": [],
+      "diagnostics": []
+    },
+    {
+      "id": "source-n-g",
+      "input": "нг",
+      "options": {
+        "from": "cyrillic",
+        "to": "arabic"
+      },
+      "text": "نگ",
+      "status": "ok",
+      "units": ["n", "g"],
+      "rules": [],
+      "diagnostics": []
+    },
+    {
+      "id": "front-vowels",
+      "input": "xa xo xe xu",
+      "options": {
+        "from": "hapin",
+        "to": "ipa-cna"
+      },
+      "text": "æ y i ø",
+      "status": "ok",
+      "units": ["xa", "xo", "xe", "xu"],
+      "rules": ["alphabet"],
+      "diagnostics": []
+    },
+    {
+      "id": "quoted-layout",
+      "input": "a  xa \"w\"",
+      "options": {
+        "from": "hapin",
+        "to": "arabic"
+      },
+      "text": "ا  ٴا \"w\"",
+      "status": "ok",
+      "units": ["a", "xa"],
+      "rules": ["alphabet"],
+      "diagnostics": []
+    },
+    {
+      "id": "legacy-boundary",
+      "input": "n​gh",
+      "options": {
+        "from": "hapin",
+        "to": "arabic",
+        "inputFormat": "legacy-boundaries"
+      },
+      "text": "نع",
+      "status": "ok",
+      "units": ["n", "gh"],
+      "rules": ["alphabet"],
+      "diagnostics": []
+    }
+  ],
+  "rules": [
+    {
+      "id": "ngh-source-exception",
+      "status": "source-attested",
+      "pattern": "ngh",
+      "preferred": ["ng", "h"],
+      "support": 9
+    },
+    {
+      "id": "ngh-prior",
+      "status": "prior",
+      "pattern": "ngh",
+      "preferred": ["n", "gh"],
+      "support": 458,
+      "counterexamples": 9
+    },
+    {
+      "id": "ngul-context",
+      "status": "candidate",
+      "pattern": "ngul",
+      "preferred": ["n", "g"],
+      "support": 27
+    },
+    {
+      "id": "ngye-conflict",
+      "status": "ambiguous",
+      "pattern": "ngye/ngxe",
+      "preferred": ["ng"],
+      "support": 387,
+      "counterexamples": 238
+    },
+    {
+      "id": "sh-source-exception",
+      "status": "source-attested",
+      "pattern": "sh",
+      "preferred": ["s", "h"]
+    },
+    {
+      "id": "source-spelling-conflict",
+      "status": "ambiguous",
+      "pattern": "word-form",
+      "preferred": ["ng"]
+    },
+    {
+      "id": "sh-word-conflict",
+      "status": "ambiguous",
+      "pattern": "ashat",
+      "preferred": ["sh"]
+    },
+    {
+      "id": "shsh-conflict",
+      "status": "ambiguous",
+      "pattern": "shsh",
+      "preferred": ["shsh"]
+    },
+    {
+      "id": "hh-conflict",
+      "status": "ambiguous",
+      "pattern": "hh",
+      "preferred": ["hh"]
+    },
+    {
+      "id": "tsh-overlap",
+      "status": "ambiguous",
+      "pattern": "tsh",
+      "preferred": ["t", "sh"]
+    }
+  ]
+}

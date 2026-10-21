@@ -8,18 +8,14 @@ export default defineConfig({
     },
     {
       id: 'zh-CN',
-      name: '中文',
+      name: '简体中文',
     },
-    // { id: 'kk-CN', name: 'قازاقشا' },
-    // {
-    //   id: "kk-KZ", name: "қазақ тілі"
-    // }
   ],
   themeConfig: {
     logo: false,
     footer: `Copyright &copy; 2024 <a href="https://github.com/ha-pin">Hapin</a> All Rights Reserved<br/ >Want to discuss? &gt; <a href="https://discord.gg/aU2BsjSqhq">Join Discord</a> &lt; <br />Powered by <a href="https://d.umijs.org">dumi</a>`,
     showLineNum: true,
-    perfersColor: { default: 'auto', switch: true },
+    prefersColor: { default: 'auto', switch: true },
     socialLinks: {
       github: 'https://github.com/ha-pin',
     },
@@ -51,58 +47,6 @@ export default defineConfig({
         },
       ],
       'en-US': [
-        {
-          title: 'Getting Started',
-          link: '/getting-started',
-        },
-        {
-          title: 'Standardize',
-          link: '/standardize',
-        },
-        {
-          title: 'Playground',
-          link: '/components/playground',
-        },
-        {
-          title: 'IME',
-          link: '/ime',
-        },
-        {
-          title: 'Development',
-          link: '/developer',
-        },
-        {
-          title: 'Projects',
-          link: '/projects',
-        },
-      ],
-      'kk-CN': [
-        {
-          title: 'Getting Started',
-          link: '/getting-started',
-        },
-        {
-          title: 'Standardize',
-          link: '/standardize',
-        },
-        {
-          title: 'Playground',
-          link: '/components/playground',
-        },
-        {
-          title: 'IME',
-          link: '/ime',
-        },
-        {
-          title: 'Development',
-          link: '/developer',
-        },
-        {
-          title: 'Projects',
-          link: '/projects',
-        },
-      ],
-      'kk-KZ': [
         {
           title: 'Getting Started',
           link: '/getting-started',

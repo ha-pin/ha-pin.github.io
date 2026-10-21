@@ -29,7 +29,7 @@ You can get the development history by the post:
 | a            | ا                           | А а                   | ɑ   |
 | b            | ب                           | Б б                   | b   |
 | d            | د                           | Д д                   | d   |
-| e            | ى                           | Ы ы                   | e   |
+| e            | ى                           | Ы ы                   | ə   |
 | f            | ف                           | Ф ф                   | f   |
 | g            | گ                           | Г г                   | ɡ   |
 | h            | ح                           | Х х                   | x   |
@@ -80,21 +80,25 @@ You can get the development history by the post:
 | ,            | ،                           |
 | ?            | ؟                           |
 | ;            | ؛                           |
-| -            | ۔                           |
-| .            | ٜ                           |
+| -            | ـ                           |
+| .            | .                           |
 
 ### For The Cyrillic Alphabet
 
-| Hapin scheme | The Persian-Arabic Alphabet | The Cyrillic Alphabet | IPA |
-| ------------ | --------------------------- | --------------------- | --- |
-| io / yo      | يو                          | Ё ё                   | jo  |
-| i / yi       | ي                           | И и                   | j   |
-| shsh         | شش                          | Щ щ                   | ʃtʃ |
-| ts / c       | تس                          | Ц ц                   | ts  |
-| xx           | --                          | Ъ ъ                   | --  |
-| xy           | --                          | Ь ь                   | --  |
-| yy           | --                          | Э э                   |     |
-| iw / yw      | يۋ                          | Ю ю                   | jw  |
-| ia / ya      | يا                          | Я я                   | jɑ  |
+| Hapin scheme                   | The Persian-Arabic Alphabet | The Cyrillic Alphabet | IPA |
+| ------------------------------ | --------------------------- | --------------------- | --- |
+| io / yo                        | يو                          | Ё ё                   | jo  |
+| i / yi                         | ي                           | И и                   | j   |
+| shsh                           | شش                          | Щ щ                   | ʃtʃ |
+| ts / c                         | تس                          | Ц ц                   | ts  |
+| xx (historical, unimplemented) | --                          | Ъ ъ                   | --  |
+| xy (historical, unimplemented) | --                          | Ь ь                   | --  |
+| yy (historical, unimplemented) | --                          | Э э                   |     |
+| iw / yw                        | يۋ                          | Ю ю                   | jw  |
+| ia / ya                        | يا                          | Я я                   | jɑ  |
 
 > **It should be noted that:** `hapin-arabic` would not support the the above-mentioned(Only for The Cyrillic Alphabet) scheme. And the homologous alphabet of `И и` is `ٴى` before, but now is `ي`.
+
+## Implementation support
+
+This reference includes historical scheme intent. In the current library, xx/xy/yy are not implemented letter aliases; source ъ/ь are omitted with loss reporting, and source э maps to ye. The e IPA value is ə. The hyphen maps to ـ and a period remains a period. See [versioned API support](/developer/hapin-utils) and [letter segmentation](/standardize/segmentation).

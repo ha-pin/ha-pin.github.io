@@ -17,3 +17,10 @@ nav:
 
 - [哈拼标准化](/zh-CN/standardize)
 - [输入法支持](/zh-CN/ime)
+
+### 切分与开发
+
+- [字母切分规则](/zh-CN/standardize/segmentation)
+- [工具包与 API](/zh-CN/developer/hapin-utils)
+
+官网界面与文档提供英语和简体中文；字母示例保留其原文字形。

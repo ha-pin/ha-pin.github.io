@@ -12,3 +12,10 @@ nav:
 
 Suggest reading the [The Standardization of Hapin](./standardize) chapter first. Based on Pinyin
 , you can get started quickly!
+
+### Segmentation and development
+
+- [Letter segmentation](/standardize/segmentation)
+- [Library API](/developer/hapin-utils)
+
+The site interface and documentation are available in English and Simplified Chinese. Source-letter examples retain their original scripts.
