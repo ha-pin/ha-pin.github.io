@@ -106,14 +106,14 @@ const double_valid = [
 ];
 
 export default function Playground() {
-  const [hapin, setHapin] = useState<string>();
+  const [hapin, setHapin] = useState<string>('');
   const route = useLocation();
   const lang: 'en-US' | 'zh-CN' =
     route.pathname === '/zh-CN' || route.pathname.startsWith('/zh-CN/')
       ? 'zh-CN'
       : 'en-US';
   const [maped, setMaped] = useState<string[]>([]);
-  const hapinRef = useRef<string>();
+  const hapinRef = useRef<string>('');
   const [isMobile, setIsMobile] = useState(
     () => typeof window !== 'undefined' && window.innerWidth < 768,
   );
