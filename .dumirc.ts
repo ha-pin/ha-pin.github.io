@@ -13,7 +13,7 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: false,
-    footer: `Copyright &copy; 2024 <a href="https://github.com/ha-pin">Hapin</a> All Rights Reserved<br/ >Want to discuss? &gt; <a href="https://discord.gg/aU2BsjSqhq">Join Discord</a> &lt; <br />Powered by <a href="https://d.umijs.org">dumi</a>`,
+    footer: `Copyright &copy; 2024-至今 <a href="https://github.com/ha-pin">Hapin</a> All Rights Reserved<br/ >Want to discuss? &gt; <a href="https://discord.gg/aU2BsjSqhq">Join Discord</a> &lt; <br />Powered by <a href="https://d.umijs.org">dumi</a>`,
     showLineNum: true,
     prefersColor: { default: 'auto', switch: true },
     socialLinks: {
