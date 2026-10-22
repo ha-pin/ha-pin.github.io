@@ -53,3 +53,5 @@ You may pass an analysis directly to `convert(analysis, { from: analysis.source,
 Unknown characters, unclosed quotes, ambiguous segmentation and candidate truncation have stable diagnostic codes. Normalization can lose source distinctions such as hard/soft signs or merged и/й spellings; inspect losses. No reverse IPA or general Hapin→Cyrillic function is promised.
 
 See [generated examples](/developer/examples), [segmentation](/standardize/segmentation), and [migration](/developer/hapin-utils-migration). The library is MIT licensed; this page does not redefine historical scheme licensing.
+
+For native Rust or Rust-backed WASM packages, see [hapin-utils-rs](/developer/hapin-utils-rs), which implements the same 5.0.0 conversion behavior and context rules.

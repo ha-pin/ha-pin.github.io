@@ -53,3 +53,5 @@ const result = convert('арزانға', { from: 'cyrillic', to: 'arabic' });
 未知字符、未闭合引号、切分歧义和候选截断都有诊断 code。规范化可能丢失硬软音符号、и/й 等来源区别，应检查 losses。当前不承诺 IPA 反向或通用 Hapin→ 西里尔转换。
 
 参见[执行示例](/zh-CN/developer/examples)、[切分规则](/zh-CN/standardize/segmentation)和[迁移说明](/zh-CN/developer/hapin-utils-migration)。工具包按 MIT 开源，本页不重新定义历史方案许可。
+
+原生 Rust 或基于 Rust 的 WASM 包请见 [hapin-utils-rs](/zh-CN/developer/hapin-utils-rs)，其实现与本页相同的 5.0.0 转换行为和上下文规则。

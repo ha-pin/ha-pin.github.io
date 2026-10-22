@@ -30,7 +30,7 @@ for (const p of files) {
     assert(routes.has(url), `${p}: missing route ${url}`); links++;
   }
 }
-for (const stem of ['standardize/segmentation', 'standardize/segmentation-evidence', 'developer/hapin-utils', 'developer/hapin-utils-migration']) {
+for (const stem of ['standardize/segmentation', 'standardize/segmentation-evidence', 'developer/hapin-utils', 'developer/hapin-utils-migration', 'developer/hapin-utils-rs']) {
   assert(fs.existsSync(path.join(root, `docs/${stem}.md`)) && fs.existsSync(path.join(root, `docs/${stem}.zh-CN.md`)));
 }
 console.log(`Verified two content locales, ${data.examples.length} versioned examples, paired core pages and ${links} absolute internal links`);
